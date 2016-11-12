@@ -1,2 +1,2 @@
 # jd-goods-searcher
-Search top N sales-best foods
+Search top N best sales on food
