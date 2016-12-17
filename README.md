@@ -13,7 +13,8 @@ $ pip3 install bs4
 $ python3 search_food.py --help
 usage: search_food.py [-h] [-k KEYWORD] [-c COOKIE]
 
-Search food top 12 sales
+Search food top 10(default) sales on [夏威夷果 松子 薯片 旺旺 好丽友 饼干 蒸蛋糕 奥利奥 猪肉铺 牛肉 芒果干
+红枣 枸杞 巧克力 糖果 德芙]
 
 optional arguments:
   -h, --help  show this help message and exit
