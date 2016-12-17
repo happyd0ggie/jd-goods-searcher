@@ -21,7 +21,6 @@ optional arguments:
   -k KEYWORD  Search food given keyword
   -c COOKIE   Set cookie
 ```
-That's it.
 ### Example
 ```
 sdx@sdx-pc:~/Documents/code/python/jd-goods-searcher$ python3 search_food.py -c "__jda=122270672.953723416.1481940540.1481940540.1481953894.1; __jdb=122270672.1.953723416|1.1481953894; __jdc=122270672; __jdv=122270672|direct|-|none|-|1481953893940; o2-webp=true; __jdu=953723416" -k 夏威夷果
@@ -81,5 +80,6 @@ sdx@sdx-pc:~/Documents/code/python/jd-goods-searcher$ python3 search_food.py -c 
 地址:  http://item.jd.com/1150551.html
 **************************************************
 ```
+That's it.
 ### Note
 Cookie can be copy from browser by press f12 after you open https://www.jd.com
