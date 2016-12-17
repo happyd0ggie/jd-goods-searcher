@@ -14,7 +14,7 @@ from bs4 import BeautifulSoup
 import re
 import argparse
 import urllib3
-import urllib
+import urllib.request
 from collections import OrderedDict
 
 # global settings
@@ -100,7 +100,7 @@ class Searcher:
         foods_list = self.get_foods_list(html_doc)
         foods_info = self.get_food_info(foods_list)
             
-        print('\n按销量排名,找到一下12个好吃的')
+        print('\n按销量排名,找到一下{0}个好吃的:'.format(show_food_count))
         print('*'*50)
         for food_info in foods_info:
             for k, v in food_info.items():
@@ -109,7 +109,7 @@ class Searcher:
                 elif k == 'commits':
                     print('买家: ', v)
                 elif k == 'price':
-                    print('售价: ', v)
+                    print('售价: {0} RMB'.format(v))
                 elif k == 'url':
                     print('地址: ', v)
                 else:
@@ -121,7 +121,11 @@ def show_avaiable_keyword_lists():
         print('-> ' + kw)
 
 def main():
-    parser = argparse.ArgumentParser(prog = sys.argv[0], description = 'Search food top 12 sales')
+    desc = '''
+    Search food top 10(default) sales on [夏威夷果 松子 薯片 旺旺 好丽友 饼干
+    蒸蛋糕 奥利奥 猪肉铺 牛肉 芒果干 红枣 枸杞 巧克力 糖果 德芙]
+    '''
+    parser = argparse.ArgumentParser(prog = sys.argv[0], description = desc)
     parser.add_argument('-k', dest = 'keyword', help = 'Search food given keyword')
     parser.add_argument('-c', dest = 'cookie', help = 'Set cookie')
     args = parser.parse_args()
