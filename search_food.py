@@ -40,6 +40,7 @@ class Searcher:
         #print(self.search_url)
         #print(cookie)
 
+    # set request headers
     def set_headers(self):
         self.headers['Host'] = Host
         self.headers['User-Agent'] = UserAgent
@@ -50,6 +51,7 @@ class Searcher:
         self.headers['Upgrade-INsecure-Requests'] = UpgradeInsecureRequests
         self.headers['Cache-Control'] = CacheControl
 
+    # get html page containing information we want
     def get_html(self, url):
         try:
             http = urllib3.PoolManager()
@@ -73,7 +75,7 @@ class Searcher:
     def get_food_info(self, foods_list):
         foods_info = []
         for food in foods_list:
-            food_info = OrderedDict()
+            food_info = OrderedDict()  # use OrderedDict instead of Dict
             food_info['title'] = self.get_food_title(food)
             food_info['commits'] = self.get_food_commits_count(food)
             food_info['price'] = self.get_food_price(food)
@@ -116,6 +118,7 @@ class Searcher:
                     pass
             print('*'*50)
 
+# get only a few foods
 def show_avaiable_keyword_lists():
     for kw in keyword_lists:
         print('-> ' + kw)
