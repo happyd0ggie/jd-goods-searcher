@@ -82,4 +82,4 @@ sdx@sdx-pc:~/Documents/code/python/jd-goods-searcher$ python3 search_food.py -c 
 ```
 That's it.
 ### Note
-Cookie can be copy from browser by press f12 after you open https://www.jd.com
+Cookie can be copied from browser by press f12 after you open https://www.jd.com
