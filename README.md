@@ -8,6 +8,10 @@ jd-goods-searcher is a searcher to Search top N best sales foods.
 ```
 $ pip3 install bs4
 ```
+* Install lxml module.
+```
+$ pip3 install lxml
+```
 ### Usage(command line only)
 ```
 $ python3 search_food.py --help
