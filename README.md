@@ -4,14 +4,7 @@ jd-goods-searcher is a searcher to Search top N best sales foods.
 ## How to use
 ### Prerequisites
 * Install Python3 on your system. Refer to **[Install Python3](https://docs.python.org/3/using/index.html)**
-* Install BeautifulSoup module.
-```
-$ pip3 install bs4
-```
-* Install lxml module.
-```
-$ pip3 install lxml
-```
+* BeautifulSoup module and lxm module will installed automatically..
 ### Usage(command line only)
 ```
 $ python3 search_food.py --help
