@@ -30,6 +30,7 @@ def check_modules(requirements):
     os.unlink('modules.tmp')
 
 def main():
+    pass
     check_modules('requirements.txt')
 
 if __name__ == '__main__':
