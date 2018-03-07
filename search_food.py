@@ -12,13 +12,13 @@ try:
     import sys
     import os
     import argparse
-    import util.check_module
-    import urllib.request
+    from util import check_modules
+    from urllib import request
     from collections import OrderedDict
     import urllib3
     from bs4 import BeautifulSoup
-Exception ImportError
-    check_module('requirements.txt')
+except ImportError:
+    check_modules('requirements.txt')
     from bs4 import BeautifulSoup
 
 # global settings
