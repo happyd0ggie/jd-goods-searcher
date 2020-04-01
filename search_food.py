@@ -58,7 +58,7 @@ class Searcher:
             None.
         """
         self.search_url = '{0}?keyword={1}&enc=utf-8&psort=3'.format(
-            SEARCH_URL, urllib.request.quote(keyword))
+            SEARCH_URL, request.quote(keyword))
         self.headers = {}
         self.headers['Cookie'] = cookie
 
